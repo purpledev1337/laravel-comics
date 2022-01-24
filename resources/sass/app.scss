@@ -1,0 +1,112 @@
+//
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+        height: 150px;
+        display: inline-block;
+        margin: 0 15px;
+        font-size: 0.8em;
+        font-weight: 900;
+      
+        a {
+        display: inline-block;
+        line-height: 150px;
+        text-decoration: none;
+        text-transform: uppercase;
+        }
+      
+        //   &.active {
+        //     border-bottom: 5px solid rgb(2,130,249);
+        //   }
+    }
+}
+
+main {
+    padding: 70px 0;
+    color: white;
+    background-color: rgb(28,28,28);
+    text-transform: uppercase;
+  
+      .container {
+        text-align: center;
+  
+        section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          text-align: left;
+          font-size: 0.9em;
+          position: relative;
+        }
+      }
+  }
+  
+  #products_load_more {
+    display: inline-block;
+    width: 200px;
+    background-color: rgb(2,130,249);
+    padding: 10px;
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  #current_series_btn {
+    display: inline-block;
+    width: 250px;
+    background-color: rgb(2,130,249);
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 700;
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+
+#jumbotron {
+    height: 400px;
+    background-image: url('../../storage/app/public/assets/img/jumbotron.jpg');
+}
+
+#info_banner {
+    height: 180px;
+    background-color: rgb(2,130,249);
+    color: white;
+  
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+  
+          .card {
+            display: flex;
+            align-items: center;
+          }
+  
+          img {
+            height: 50px;
+            margin: 0 10px;
+          }
+          
+          span {
+            text-transform: uppercase;
+          }
+      }
+  }
