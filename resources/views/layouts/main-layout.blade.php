@@ -19,11 +19,9 @@
 
     @include('components.infoBanner')
 
-    {{-- @include('components.footerNav') --}}
+    @include('components.footerNav')
 
-    {{-- @include('components.footerSocial') --}}
-
-    @include('components.footer')
+    @include('components.footerSocial')
 
 </body>
 </html>

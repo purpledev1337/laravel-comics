@@ -14,14 +14,8 @@ use Symfony\Component\VarDumper\Cloner\Data;
 |
 */
 
-Route::get('/', function () {
-
-    return view('pages.home');
-}) -> name('home');
+Route::get('/', 'HomeCards@home') -> name('home');
 
 Route::get('header', 'HeaderLinks@header') -> name('header');
 
-Route::get('comics', function () {
-
-    return view('pages.comics');
-}) -> name('comics');
+Route::get('comics', 'HomeCards@comics') -> name('comics');

@@ -25,6 +25,7 @@ header li {
 }
 
 header li a {
+  color: black;
   display: inline-block;
   line-height: 150px;
   text-decoration: none;
@@ -51,17 +52,7 @@ main .container section {
   position: relative;
 }
 
-#products_load_more {
-  display: inline-block;
-  width: 200px;
-  background-color: #0282f9;
-  padding: 10px;
-  font-size: 0.8em;
-  text-align: center;
-  font-weight: 700;
-}
-
-#current_series_btn {
+main .container #current_series_btn {
   display: inline-block;
   width: 250px;
   background-color: #0282f9;
@@ -74,9 +65,118 @@ main .container section {
   left: 0;
 }
 
+.product_card {
+  width: calc(16.6666666667% - 20px);
+  margin: 0 10px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product_card a {
+  color: white;
+  text-decoration: none;
+}
+
+.product_card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.product_card .product_name {
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.product_card .product_details {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.product_card:hover .product_details {
+  display: initial;
+}
+
+#products_load_more {
+  display: inline-block;
+  width: 200px;
+  background-color: #0282f9;
+  padding: 10px;
+  font-size: 0.8em;
+  text-align: center;
+  font-weight: 700;
+}
+
 #jumbotron {
   height: 400px;
   background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
+}
+
+#comics_bar {
+  height: 80px;
+  background-color: #0282f9;
+  position: relative;
+}
+
+#comics_bar img {
+  border: 3px solid white;
+  position: absolute;
+  top: -250px;
+}
+
+#comics_page {
+  padding: 4% 2%;
+  display: flex;
+}
+
+#comics_page .left {
+  width: 66.6666666667%;
+}
+
+#comics_page .left .buy_bar {
+  height: 50px;
+  color: #74fd72;
+  background-color: #55ba59;
+  display: flex;
+  align-items: center;
+}
+
+#comics_page .left .buy_bar .left {
+  width: 70%;
+  padding: 0 2%;
+  border-right: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+}
+
+#comics_page .left .buy_bar .left .price {
+  display: inline-block;
+  color: white;
+}
+
+#comics_page .left .buy_bar .right {
+  width: 30%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#comics_page .left p {
+  font-size: 1.5em;
+}
+
+#comics_page .right {
+  width: 33.3333333333%;
+  padding: 0 2%;
 }
 
 #info_banner {
@@ -104,5 +204,70 @@ main .container section {
 
 #info_banner .container span {
   text-transform: uppercase;
+}
+
+#footer_social {
+  height: 120px;
+  background-color: #303030;
+}
+
+#footer_social .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer_social .btn {
+  display: inline-block;
+  color: white;
+  padding: 15px;
+  border: 1px solid #0282f9;
+}
+
+#footer_social span {
+  color: #0282f9;
+  font-size: 2em;
+}
+
+#footer_social img {
+  margin: 0 15px;
+}
+
+#footer_nav {
+  height: 400px;
+  color: white;
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  padding: 25px 0;
+  overflow: hidden;
+}
+
+#footer_nav .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#footer_nav .container ul {
+  margin: 15px 0;
+  margin-right: 50px;
+  display: inline-block;
+  list-style: none;
+}
+
+#footer_nav .container ul li {
+  margin: 5px 0;
+}
+
+#footer_nav .container ul li a {
+  color: grey;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#footer_nav .container img {
+  position: relative;
+  bottom: 120px;
 }
 

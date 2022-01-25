@@ -24,15 +24,12 @@ header {
         font-weight: 900;
       
         a {
-        display: inline-block;
-        line-height: 150px;
-        text-decoration: none;
-        text-transform: uppercase;
+            color: black;
+            display: inline-block;
+            line-height: 150px;
+            text-decoration: none;
+            text-transform: uppercase;
         }
-      
-        //   &.active {
-        //     border-bottom: 5px solid rgb(2,130,249);
-        //   }
     }
 }
 
@@ -42,21 +39,73 @@ main {
     background-color: rgb(28,28,28);
     text-transform: uppercase;
   
-      .container {
-        text-align: center;
+        .container {
+            text-align: center;
   
-        section {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          text-align: left;
-          font-size: 0.9em;
-          position: relative;
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                text-align: left;
+                font-size: 0.9em;
+                position: relative;
+            }
+
+            #current_series_btn {
+                display: inline-block;
+                width: 250px;
+                background-color: rgb(2,130,249);
+                padding: 15px;
+                font-size: 1.5em;
+                text-align: center;
+                font-weight: 700;
+                position: absolute;
+                top: -100px;
+                left: 0;
+            }
         }
-      }
-  }
+}
+
+.product_card {
+    width: calc((100% / 6) - 20px);
+    margin: 0 10px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+        }
+
+        .product_name {
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .product_details {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: black;
+            position: absolute;
+            top: 0;
+            display: none;
+        }
+                
+    &:hover .product_details {
+        display: initial;
+    }
+}
   
-  #products_load_more {
+#products_load_more {
     display: inline-block;
     width: 200px;
     background-color: rgb(2,130,249);
@@ -64,24 +113,70 @@ main {
     font-size: 0.8em;
     text-align: center;
     font-weight: 700;
-  }
-  
-  #current_series_btn {
-    display: inline-block;
-    width: 250px;
-    background-color: rgb(2,130,249);
-    padding: 15px;
-    font-size: 1.5em;
-    text-align: center;
-    font-weight: 700;
-    position: absolute;
-    top: -100px;
-    left: 0;
-  }
+}
 
 #jumbotron {
     height: 400px;
     background-image: url('../../storage/app/public/assets/img/jumbotron.jpg');
+}
+
+#comics_bar {
+    height: 80px;
+    background-color: rgb(2,130,249);
+    position: relative;
+      
+    img {
+        border: 3px solid white;
+        position: absolute;
+        top: -250px;
+    }
+}
+
+#comics_page {
+    padding: 4% 2%;
+    display: flex;
+
+    .left {
+        width: calc(100% / 3 * 2);
+
+        .buy_bar {
+            height: 50px;
+            color: #74fd72;
+            background-color: #55ba59;
+            display: flex;
+            align-items: center;
+            
+            .left {
+                width: 70%;
+                padding: 0 2%;
+                border-right: 1px solid #000;
+                display: flex;
+                justify-content: space-between;
+
+                .price {
+                    display: inline-block;
+                    color: white;
+                }
+            }
+
+            .right {
+                width: 30%;
+                color: white;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+    }
+
+    .right {
+        width: calc(100% / 3);
+        padding: 0 2%;
+    }
+
 }
 
 #info_banner {
@@ -89,24 +184,89 @@ main {
     background-color: rgb(2,130,249);
     color: white;
   
-      .container {
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+                .card {
+                    display: flex;
+                    align-items: center;
+                }
+
+                img {
+                    height: 50px;
+                    margin: 0 10px;
+                }
+                
+                span {
+                    text-transform: uppercase;
+                }
+        }
+}
+
+#footer_social {
+    height: 120px;
+    background-color: rgb(48,48,48);
+
+    .container {
         height: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+    }
+
+    .btn {
+        display: inline-block;
+        color: white;
+        padding: 15px;
+        border: 1px solid rgb(2,130,249);
+    }
+
+    span {
+        color: rgb(2,130,249);
+        font-size: 2em;
+    }
+
+    img {
+        margin: 0 15px;
+    }
+}
+
+#footer_nav {
+    height: 400px;
+    color: white;
+    background-image: url('../../storage/app/public/assets/img/footer-bg.jpg');
+    padding: 25px 0;
+    overflow: hidden;
   
-          .card {
+        .container {
+            height: 100%;
             display: flex;
-            align-items: center;
-          }
+            flex-direction: column;
+            flex-wrap: wrap;
   
-          img {
-            height: 50px;
-            margin: 0 10px;
-          }
+            ul {
+                margin: 15px 0;
+                margin-right: 50px;
+                display: inline-block;
+                list-style: none;
+
+                    li {
+                        margin: 5px 0;
+
+                        a {
+                            color: grey;
+                            text-decoration: none;
+                            display: inline-block;
+                        }
+                    }
+            }
           
-          span {
-            text-transform: uppercase;
-          }
-      }
-  }
+            img {
+                position: relative;
+                bottom: 120px
+            }
+        }
+}
